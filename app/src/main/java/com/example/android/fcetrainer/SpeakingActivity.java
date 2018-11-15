@@ -6,6 +6,8 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class SpeakingActivity extends AppCompatActivity {
 
     ConstraintLayout root;
@@ -16,16 +18,20 @@ public class SpeakingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_speaking);
         root = findViewById(R.id.root_speaking_parts);
 
-        //add the list of task in speaking activity
-        String [] speakingParts = new String [4];
-        speakingParts[0] = "part 1: interview";
-        speakingParts[1] = "part 2: individual long turn";
-        speakingParts[2] = "part 3: collaborative tasks";
-        speakingParts[3] = "part 4: discussion";
 
-        for(int index = 0; index < speakingParts.length; index++){
+
+        //Add ArrayList for performance
+        ArrayList<String> speakingParts = new ArrayList<String>();
+        speakingParts.add("part 1: interview");
+        speakingParts.add("part 2: individual long turn");
+        speakingParts.add("part 3: collaborative tasks");
+        speakingParts.add("part 4: discussion");
+
+
+
+        for(int index = 0; index < speakingParts.size(); index++){
             TextView speakingPartView = new TextView(this);
-            speakingPartView.setText(speakingParts[index]);
+            speakingPartView.setText(speakingParts.get(index));
             root.addView(speakingPartView);
 
         }
