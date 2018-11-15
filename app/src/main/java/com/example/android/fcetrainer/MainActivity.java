@@ -3,6 +3,7 @@ package com.example.android.fcetrainer;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.DragEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,14 +26,6 @@ public class MainActivity extends AppCompatActivity {
         readingTextView = findViewById(R.id.reading_textview);
         listeningTextView = findViewById(R.id.listening_textview);
 
-
-        readingTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ReadingActivity.class);
-                startActivity(i);
-            }
-        });
 
         speakingTextView.setOnClickListener((new View.OnClickListener() {
             @Override
