@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,13 +30,9 @@ public class SpeakingActivity extends AppCompatActivity {
         speakingParts.add("part 4: discussion");
 
 
-
-        for(int index = 0; index < speakingParts.size(); index++){
-            TextView speakingPartView = new TextView(this);
-            speakingPartView.setText(speakingParts.get(index));
-            root.addView(speakingPartView);
-
-        }
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, speakingParts);
+        ListView speakingListView = findViewById(R.id.speaking_listView);
+        speakingListView.setAdapter(itemsAdapter);
 
     }
 }
