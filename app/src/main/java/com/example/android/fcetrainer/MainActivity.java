@@ -21,7 +21,7 @@ import android.widget.Toast;
 
         mainRoot = findViewById(R.id.main_root);
 
-        String[] categories = new String[4];
+        final String[] categories = new String[4];
         categories[0] = "speaking";
         categories[1] = "writing";
         categories[2] = "listening";
@@ -33,17 +33,40 @@ import android.widget.Toast;
             categoryView.setOnClickListener((new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /*Intent i = new Intent(MainActivity.this, SpeakingActivity.class);
-                    startActivity(i);*/
-                    Toast.makeText(getApplicationContext(), "this is index " + category1, Toast.LENGTH_LONG).show();
+                    Intent i;
+                    switch (category1){
+                        case "speaking":
+                            i= new Intent(MainActivity.this, SpeakingActivity.class);
+                    startActivity(i);
+                    break;
+                        case "writing":
+                            Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
+                            i= new Intent(MainActivity.this, WritingActivity.class);
+                            startActivity(i);
+                            break;
+                        case "listening":
+                            Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
+                            i= new Intent(MainActivity.this, ListeningActivity.class);
+                            startActivity(i);
+                            break;
+                        case "reading":
+                            Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
+                            i = new Intent(MainActivity.this, ReadingActivity.class);
+                            startActivity(i);
+                            break;
+                            default:
+                                Toast.makeText(getApplicationContext(), "you have to chose a category", Toast.LENGTH_LONG).show();
+                                break;
+
+
+                    }
+
                 }
             }));
             mainRoot.addView(categoryView);
 
         }
 
-
-        /*speakingTextView.setOnClickListener(); */
 
     }
 }
