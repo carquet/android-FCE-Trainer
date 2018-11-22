@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
- public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     LinearLayout mainRoot;
 
 
@@ -34,19 +34,19 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View v) {
                     Intent i;
-                    switch (category1){
+                    switch (category1) {
                         case "speaking":
-                            i= new Intent(MainActivity.this, SpeakingActivity.class);
-                    startActivity(i);
-                    break;
+                            i = new Intent(MainActivity.this, SpeakingActivity.class);
+                            startActivity(i);
+                            break;
                         case "writing":
                             Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
-                            i= new Intent(MainActivity.this, WritingActivity.class);
+                            i = new Intent(MainActivity.this, WritingActivity.class);
                             startActivity(i);
                             break;
                         case "listening":
                             Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
-                            i= new Intent(MainActivity.this, ListeningActivity.class);
+                            i = new Intent(MainActivity.this, ListeningActivity.class);
                             startActivity(i);
                             break;
                         case "reading":
@@ -54,9 +54,9 @@ import android.widget.Toast;
                             i = new Intent(MainActivity.this, ReadingActivity.class);
                             startActivity(i);
                             break;
-                            default:
-                                Toast.makeText(getApplicationContext(), "you have to chose a category", Toast.LENGTH_LONG).show();
-                                break;
+                        default:
+                            Toast.makeText(getApplicationContext(), "you have to chose a category", Toast.LENGTH_LONG).show();
+                            break;
 
 
                     }
