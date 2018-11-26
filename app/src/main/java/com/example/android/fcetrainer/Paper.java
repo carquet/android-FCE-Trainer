@@ -9,9 +9,10 @@ public class Paper {
     private String nFormat; //example a modified cloze test containing eight gaps
     private String nTips;
     private String nMarkingStyle;
+    private String nTiming;
 
     //constructor
-    public Paper(String part, String partName, String tasktype, String focus, String format, String tips, String markingStyle){
+    public Paper(String part, String partName, String tasktype, String focus, String format, String tips, String markingStyle, String timing){
         nPart = part;
         nPartName = partName;
         nTaskType = tasktype;
@@ -19,6 +20,7 @@ public class Paper {
         nFormat = format;
         nTips = tips;
         nMarkingStyle = markingStyle;
+        nTiming = timing;
     }
 
     //getter
@@ -51,4 +53,7 @@ public class Paper {
         return nMarkingStyle;
     }
 
+    public String getnTiming() {
+        return nTiming;
+    }
 }

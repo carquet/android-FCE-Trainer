@@ -18,19 +18,17 @@ public class SpeakingActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speaking);
-        root = findViewById(R.id.root_speaking_parts);
+
 
 
 
         //Add ArrayList for performance
-        ArrayList<String> speakingParts = new ArrayList<String>();
-        speakingParts.add("part 1: interview");
-        speakingParts.add("part 2: individual long turn");
-        speakingParts.add("part 3: collaborative tasks");
-        speakingParts.add("part 4: discussion");
+        ArrayList<Paper> speakingParts = new ArrayList<Paper>();
+        speakingParts.add(new Paper("1", "interview", "a conversation between the interlocutor and each candidate", "the focus is on general interactional and social language", "not specific", "the questions are related to the candidate life", "this part tests the candidates' ability to use social and interactional language", "2 minutes"));
+        speakingParts.add(new Paper("2", "long turn", "An individual long turn for each candidate with the response from the second candidate. In turn, the candidates are given a pair of photographs to talk about.", "The focus is on organizing a larger unit of discourse, comparing, describing and expressing opinions", "nost specific", "do not stop until the examiner says thank you, do not describe, fixed phrases such as passive, impersonal, relative clause... ", "this part tests the candidates' ability to use social and interactional language", "1 minute long-turn for each candidate plus a 30 seconds response from the other csandidate: the total time for part 2 is 4 minutes."));
 
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, speakingParts);
+        ArrayAdapter<Paper> itemsAdapter = new ArrayAdapter<Paper>(this, android.R.layout.simple_list_item_2, speakingParts);
         ListView speakingListView = findViewById(R.id.speaking_listView);
         speakingListView.setAdapter(itemsAdapter);
 
