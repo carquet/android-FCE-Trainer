@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/part_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Part 1"/>
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/part_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="long turn"/>
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/task_type_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cloze"/>
+    <TextView
+        android:layout_weight="0.6"
+        android:id="@+id/focus_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="conversation focus"/>
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/timing_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1min 30"/>
+
+</LinearLayout>

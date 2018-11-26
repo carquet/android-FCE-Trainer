@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    android:id="@+id/root_speaking_parts"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/speaking_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </ListView>
 
-</android.support.constraint.ConstraintLayout>
