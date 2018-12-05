@@ -38,14 +38,14 @@ public class PaperAdapter extends ArrayAdapter<Paper> {
         partNameTextView.setText(currentPaper.getnPartName());
 
         //PART TASK TYPE
-        TextView taskTypeTextView = listItemView.findViewById(R.id.task_type_text_view);
+        //TextView taskTypeTextView = listItemView.findViewById(R.id.task_type_text_view);
         //inject the info
-        taskTypeTextView.setText(currentPaper.getnTaskType());
+        //taskTypeTextView.setText(currentPaper.getnTaskType());
 
         //PART FOCUS
-        TextView focusTextView = listItemView.findViewById(R.id.focus_text_view);
+        //TextView focusTextView = listItemView.findViewById(R.id.focus_text_view);
         //inject the info
-        focusTextView.setText(currentPaper.getnFocus());
+        //focusTextView.setText(currentPaper.getnFocus());
 
         //PART TIMING
         TextView timingTextView = listItemView.findViewById(R.id.timing_text_view);
