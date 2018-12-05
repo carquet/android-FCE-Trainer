@@ -3,16 +3,21 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:layout_weight="1"
+        android:layout_weight="1.2"
         android:id="@+id/part_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/part_bubble"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
         android:text="Part 1"/>
     <TextView
         android:layout_weight="1"
         android:id="@+id/part_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="top"
         android:text="long turn"/>
 
     <TextView
