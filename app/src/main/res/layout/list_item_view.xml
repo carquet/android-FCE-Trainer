@@ -17,6 +17,8 @@
         android:id="@+id/part_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:textAllCaps="true"
         android:gravity="top"
         android:text="long turn"/>
 
