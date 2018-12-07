@@ -2,6 +2,7 @@ package com.example.android.fcetrainer;
 
 public class Paper {
     //state
+    private String nCategory;
     private String nPart; //example part 1
     private String nPartName; //example: Speaking
     private String nTaskType;
@@ -12,7 +13,8 @@ public class Paper {
     private String nTiming;
 
     //constructor
-    public Paper(String part, String partName, String tasktype, String focus, String format, String tips, String markingStyle, String timing){
+    public Paper(String category, String part, String partName, String tasktype, String focus, String format, String tips, String markingStyle, String timing){
+        nCategory = category;
         nPart = part;
         nPartName = partName;
         nTaskType = tasktype;
@@ -24,6 +26,9 @@ public class Paper {
     }
 
     //getter
+    public String getnCategory(){
+        return nCategory;
+    }
 
     public String getnPart() {
         return nPart;
