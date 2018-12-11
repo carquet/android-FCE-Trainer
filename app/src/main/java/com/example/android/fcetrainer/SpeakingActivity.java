@@ -17,7 +17,7 @@ public class SpeakingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_speaking);
+        setContentView(R.layout.list_view);
 
 
         //Add ArrayList for performance
@@ -28,7 +28,7 @@ public class SpeakingActivity extends AppCompatActivity {
         speakingParts.add(new Paper("speaking","Part 4", "discussion", "a discussion topic related to part 3", "the focus is expressing and justify opinion", "not specific", "see speaking scale", "see speaking scale", "4 minutes"));
 
         PaperAdapter paperAdapter = new PaperAdapter(this, speakingParts);
-        ListView paperListView = findViewById(R.id.speaking_listView);
+        ListView paperListView = findViewById(R.id.listView);
         paperListView.setAdapter(paperAdapter);
 
 

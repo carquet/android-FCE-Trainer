@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(i);
                             break;
                         case "reading":
-                            Toast.makeText(getApplicationContext(), "you just chose " + category1, Toast.LENGTH_LONG).show();
                             i = new Intent(MainActivity.this, ReadingActivity.class);
                             startActivity(i);
                             break;
