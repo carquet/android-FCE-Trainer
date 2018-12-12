@@ -1,6 +1,9 @@
 package com.example.android.fcetrainer;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,11 +29,15 @@ public class PaperAdapter extends ArrayAdapter<Paper> {
         //iterate through the ArrayList of Paper
         Paper currentPaper = getItem(position);
 
+
         //PART
         //find the template in the convertview
         TextView partTextView = listItemView.findViewById(R.id.part_text_view);
         //inject the info
         partTextView.setText(currentPaper.getnPart());
+        GradientDrawable partBubble = (GradientDrawable) partTextView.getBackground();
+        int categoryColor = getCategoryColor(currentPaper.getnCategory());
+        partBubble.setColor(categoryColor);
 
         //PART NAME
         TextView partNameTextView = listItemView.findViewById(R.id.part_name_text_view);
@@ -55,5 +62,21 @@ public class PaperAdapter extends ArrayAdapter<Paper> {
 
 
         return listItemView;
+    }
+
+    private int getCategoryColor(String categoryName){
+        int categoryColorColorId;
+        String category = categoryName.toLowerCase();
+        switch(category){
+            case "speaking":
+                categoryColorColorId = R.color.speaking_color;
+                break;
+            case "reading and english in use":
+                categoryColorColorId = R.color.reading_color;
+                break;
+            default:
+                categoryColorColorId = R.color.category_color_default;
+        }
+        return ContextCompat.getColor(getContext(), categoryColorColorId);
     }
 }
