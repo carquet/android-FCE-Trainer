@@ -16,6 +16,13 @@ public class ReadingActivity extends AppCompatActivity{
 
         ArrayList<Paper> readingPapers = new ArrayList<Paper>();
         readingPapers.add(new Paper("Reading and English in Use", "part 1", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 2", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 3", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 4", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 5", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 6", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+        readingPapers.add(new Paper("Reading and English in Use", "part 7", "multiple choice cloze", "multiple choice cloze", "vocabulary and idioms","a modified cloze with eight gaps. There are 4 option multiple choice items for each gap.", "", "8 questions", "1minute per question" ));
+
 
         PaperAdapter paperAdapter = new PaperAdapter(this, readingPapers);
         ListView paperListView = findViewById(R.id.listView);

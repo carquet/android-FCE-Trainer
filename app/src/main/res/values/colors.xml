@@ -5,5 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="speaking_color">#a9d7d1</color>
     <color name="category_color_default">#000</color>
-    <color name="reading_color">#fff</color>
+    <color name="reading_color">#ff2</color>
 </resources>
