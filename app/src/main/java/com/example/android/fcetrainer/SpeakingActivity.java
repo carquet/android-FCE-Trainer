@@ -39,9 +39,15 @@ public class SpeakingActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Paper currentPaper = speakingParts.get(position);
+                String currentCategory = currentPaper.getnCategory();
+                String currentPart = currentPaper.getnPart();
+                String currentTaskType = currentPaper.getnTaskType();
 
                 //create an intent that push the information to a new layout
-                Intent oneItemIntent = new Intent(SpeakingActivity.this, )
+                Intent oneItemIntent = new Intent(SpeakingActivity.this, CurrentPaperActivity.class);
+                oneItemIntent.putExtra("category", currentCategory);
+                oneItemIntent.putExtra("task type", currentTaskType);
+                startActivity(oneItemIntent);
             }
         });
 

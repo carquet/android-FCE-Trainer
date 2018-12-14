@@ -44,10 +44,7 @@ public class PaperAdapter extends ArrayAdapter<Paper> {
         //inject the info
         partNameTextView.setText(currentPaper.getnPartName());
 
-        //PART TASK TYPE
-        //TextView taskTypeTextView = listItemView.findViewById(R.id.task_type_text_view);
-        //inject the info
-        //taskTypeTextView.setText(currentPaper.getnTaskType());
+
 
         //PART FOCUS
         //TextView focusTextView = listItemView.findViewById(R.id.focus_text_view);
